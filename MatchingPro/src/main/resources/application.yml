@@ -1,0 +1,28 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+# port&context-path설정 / server.xml에 적던 것 (tomcat)
+    
+spring: 
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+# JSP 설정 ViewResolver 설정
+# request 요청이 오면 응답을 할 때 데이터를 응답할지 / 파일을 응답할지 정하는 것
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/matching?serverTimezone=Asia/Seoul
+    username: match
+    password: 1029
+# database connect / jsp에서 context.xml에 적던 것
+    
+  jpa:
+    hibernate:
+      ddl-auto: update # 
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true  
+#

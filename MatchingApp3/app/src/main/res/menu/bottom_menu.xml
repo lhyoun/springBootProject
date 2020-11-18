@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tab1"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/icon_home2"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/tab2"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/icon_team"
+        android:title="팀" />
+
+    <item
+        android:id="@+id/tab3"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/icon_member2"
+        android:title="선수" />
+
+</menu>

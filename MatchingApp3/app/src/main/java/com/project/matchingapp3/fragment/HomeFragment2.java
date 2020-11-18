@@ -1,0 +1,127 @@
+package com.project.matchingapp3.fragment;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.project.matchingapp3.R;
+import com.project.matchingapp3.TeamActivity;
+import com.project.matchingapp3.activity.TeamDetailActivity;
+import com.project.matchingapp3.adapter.NoticeBListAdapter;
+import com.project.matchingapp3.adapter.OnNoticeBClickListener;
+import com.project.matchingapp3.model.Battle;
+import com.project.matchingapp3.model.User;
+
+import java.util.ArrayList;
+
+public class HomeFragment2 extends Fragment {
+
+    private ArrayList<Battle> battleList;
+    private User loginUser;
+    private String jwtToken;
+
+    RecyclerView recyclerView;
+    NoticeBListAdapter adapter;
+
+    public HomeFragment2(){}
+
+    public HomeFragment2(ArrayList<Battle> battleList, User loginUser, String jwtToken){
+        this.battleList = battleList;
+        this.loginUser = loginUser;
+        this.jwtToken = jwtToken;
+
+        //this.users.addAll(party);
+        if(battleList != null && battleList.size() != 0){
+            Log.e("test-Home프래그먼트2", "배틀리스트 받음 : " + battleList.toString());
+        }else{
+            Log.e("test-Home프래그먼트2", "배틀리스트 안받았다");
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        if(battleList == null || battleList.size() == 0){
+            final ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.noitem, container, false);
+            TextView tvMsg = rootView.findViewById(R.id.noitem_tv_message);
+            Button btnPage = rootView.findViewById(R.id.noitem_btn_teampage);
+            ImageView ivImage = rootView.findViewById(R.id.noitem_iv_image);
+            ivImage.setImageResource(R.drawable.icon_noitem2);
+
+            if(loginUser.getTeams() == null){
+                tvMsg.setText("예정된 내 경기가 없습니다. 팀을 먼저 가입해주세요.");
+                btnPage.setText("팀 가입하러 가기");
+                btnPage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(rootView.getContext(), TeamActivity.class);
+                        intent.putExtra("jwtToken", jwtToken);
+                        intent.putExtra("loginUser", loginUser);
+                        startActivity(intent);
+                    }
+                });
+            }else{
+                tvMsg.setText("예정된 내 경기가 없습니다.");
+                btnPage.setText("매치 신청하러 가기");
+                btnPage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(rootView.getContext(), TeamActivity.class);
+                        intent.putExtra("jwtToken", jwtToken);
+                        intent.putExtra("loginUser", loginUser);
+                        startActivity(intent);
+                    }
+                });
+            }
+            return rootView;
+        }
+
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.home_fragment3, container, false);
+        recyclerView = rootView.findViewById(R.id.recyclerView);
+
+        //리사이클러뷰에 설정할 레이아웃 매니저 - 방향세로로 설정함.
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+
+        adapter = new NoticeBListAdapter(-1);
+        adapter.setItems(battleList);
+        Log.e("test-Home프래그먼트2", "배틀 리스트 어댑터 관리수:" + adapter.getItemCount());
+
+        recyclerView.setAdapter(adapter);
+        adapter.setOnItemClickListener(new OnNoticeBClickListener() {
+            //상대팀 상세보기
+            @Override
+            public void onItemClick(NoticeBListAdapter.ViewHolder holder, View view, int position) {
+                Battle item = adapter.getItem(position);
+
+                Intent intent = new Intent(getContext(), TeamDetailActivity.class);
+                intent.putExtra("jwtToken", jwtToken);
+                intent.putExtra("loginUser", loginUser);
+                if(loginUser.getTeams().getId() == item.getRequestTeam().getId()){
+                    intent.putExtra("selectTeam", item.getResponseTeam());
+                }else{
+                    intent.putExtra("selectTeam", item.getRequestTeam());
+                }
+
+
+                startActivity(intent);
+            }
+        }, new OnNoticeBClickListener() {
+            @Override
+            public void onItemClick(NoticeBListAdapter.ViewHolder holder, View view, int position) {
+            }
+        });
+        return rootView;
+    }
+
+}

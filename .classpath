@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="MatchingApp/app/src/androidTest/java"/>
+	<classpathentry kind="src" path="MatchingApp/app/src/main/java"/>
+	<classpathentry kind="src" path="MatchingApp/app/src/test/java"/>
+	<classpathentry kind="src" path="MatchingApp2/app/src/androidTest/java"/>
+	<classpathentry kind="src" path="MatchingApp2/app/src/main/java"/>
+	<classpathentry kind="src" path="MatchingApp2/app/src/test/java"/>
+	<classpathentry kind="src" path="MatchingPro/.mvn/wrapper"/>
+	<classpathentry excluding="com/project/MatchingPro/domain/member/" kind="src" path="MatchingPro/src/main/java"/>
+	<classpathentry kind="src" path="MatchingPro/src/main/java/com/project/MatchingPro/domain/member"/>
+	<classpathentry kind="src" path="MatchingPro/src/test/java"/>
+	<classpathentry kind="lib" path="MatchingApp/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="MatchingApp2/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

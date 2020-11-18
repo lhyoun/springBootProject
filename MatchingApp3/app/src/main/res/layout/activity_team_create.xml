@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.TeamCreateActivity">
+
+    <ScrollView
+        android:layout_weight="15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tCreate_tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="팀 이름" />
+
+            <EditText
+                android:id="@+id/tCreate_et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/tCreate_tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="팀 활동지역" />
+
+            <EditText
+                android:id="@+id/tCreate_et_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/tCreate_tv_explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="팀 설명" />
+
+            <EditText
+                android:id="@+id/tCreate_et_explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="right"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/tCreate_tv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="팀 마크" />
+
+            <ImageView
+                android:id="@+id/tCreate_iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_crop" />
+
+            <Button
+                android:id="@+id/tCreate_btn_imageSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="이미지 선택하기" />
+
+            <Button
+                android:id="@+id/tCreate_btn_imageUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="이미지 등록하기" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/tCreate_btn_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="팀 생성" />
+</LinearLayout>

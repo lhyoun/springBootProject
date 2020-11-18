@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.JoinActivity">
+
+    <ScrollView
+        android:layout_weight="15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/join_tv_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="아이디" />
+
+            <EditText
+                android:id="@+id/join_et_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/join_tv_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="비번" />
+
+            <EditText
+                android:id="@+id/join_et_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/join_tv_pw2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="비번다시" />
+
+            <EditText
+                android:id="@+id/join_et_pw2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/join_tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="이름" />
+
+            <EditText
+                android:id="@+id/join_et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"/>
+
+            <TextView
+            android:id="@+id/join_tv_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="닉네임" />
+
+            <EditText
+                android:id="@+id/join_et_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/join_tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="이메일" />
+
+            <EditText
+                android:id="@+id/join_et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/join_tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="폰번호" />
+
+            <EditText
+                android:id="@+id/join_et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="지역" />
+
+            <EditText
+                android:id="@+id/join_et_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="포지션" />
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/join_rg_position"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:id="@+id/join_rb1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="공격수" />
+
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:id="@+id/join_rb2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="수비수" />
+
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:id="@+id/join_rb3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="미드필더" />
+
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:id="@+id/join_rb4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="골키퍼" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/join_tv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text="이미지" />
+
+            <ImageView
+                android:id="@+id/join_iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_crop" />
+
+            <Button
+                android:id="@+id/join_btn_imageSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="이미지 선택하기" />
+
+            <Button
+                android:id="@+id/join_btn_imageUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="이미지 등록하기" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/join_btn_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="가입" />
+
+</LinearLayout>

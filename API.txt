@@ -1,0 +1,84 @@
+1. 응답 - Response
+    1. 코드 = [https://developer.mozilla.org/ko/docs/Web/HTTP/Status](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
+    2. Body = Json, String 등 각 요청주소에 적어둠.
+
+2. 요청 - Request
+    1. Content-type = "application/json; charset=utf-8"
+    2. Method = 각 요청주소에 적어둠.
+3. 권한 
+    1. 미기재시 모두 접근가능.
+4. json 형식
+    - User
+    - Team
+    - Position
+
+## 회원가입
+
+1. 요청 - Request
+    - Url : http://ip:8000/join
+    - Method : POST
+    - Data : Body에 Json(User)
+2. 응답 - Response
+    - 정상
+        - 코드 : 201
+        - Body : "ok"
+3. 필수
+    - loginid, nickname, password 입력 필수
+    - loginid, nickname 중복검사 필수
+
+## id 중복체크
+
+1. 요청 - Request
+    - Url : [http://ip:8000/idCheck/체크](http://ip:8000/idCheck/체크할)할아이디
+    - Method : GET
+    - Data : Url경로에 String
+2. 응답 - Response
+    - 정상
+        - 코드 : 200
+        - Body :
+            - ID 있으면 : no
+            - ID 없으면 : ok
+
+## 닉네임 중복체크
+
+1. 요청 - Request
+    - Url : [http://ip:8000/nicknameCheck/체크](http://ip:8000/idCheck/체크할)할닉네임
+    - Method : GET
+    - Data : Url경로에 String
+2. 응답 - Response
+    - 정상
+        - 코드 : 200
+        - Body :
+            - ID 있으면 : no
+            - ID 없으면 : ok
+
+## 로그인
+
+1. 요청 - Request
+    - Url : http://ip:8000/login
+    - Method : POST
+    - Data : Body에 Json(User)
+2. 응답 - Response
+    - 정상
+        - 코드 : 200
+        - Body : "ok"
+        - Header : key값 Authorization에 토큰 실림.
+    - 에러
+        - Body :
+            - POST요청이 아님.
+            - 아디x
+            - 비번x
+
+## 로그아웃
+
+1. 요청 - Request
+    - Url : http://ip:8000/logout
+    - Method : GET
+2. 응답 - Response
+    - 정상
+        - 코드 : 200
+        - Body : "ok"
+
+# 팀생성
+
+# 에러

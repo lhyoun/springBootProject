@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Matching</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">메시</string>
+    <string name="nav_header_subtitle">팀이 없습니다.</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="nav_menu_1">홈</string>
+    <string name="nav_menu_2">팀 만들기</string>
+    <string name="nav_menu_3">선수</string>
+
+    <string name="appbar_menu_1">앱바 메뉴1</string>
+    <string name="appbar_menu_2">앱바 메뉴2</string>
+
+    <string name="fragment_team1">팀 목록</string>
+    <string name="fragment_team2">팀 랭킹</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

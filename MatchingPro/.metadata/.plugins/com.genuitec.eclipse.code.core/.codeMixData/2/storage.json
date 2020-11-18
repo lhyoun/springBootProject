@@ -1,0 +1,18 @@
+{
+    "telemetry.machineId": "3cb7708780c642ca607e392d1514a1f0a058848f1f46d84ecca8977d78fdaa3c",
+    "openedPathsList": {
+        "workspaces3": [
+            {
+                "id": "d5577d1c2a0eb0c2cc0a08f49ef0fbb6",
+                "configURIPath": "file:///c%3A/Users/admin/Desktop/hayoun/final/MatchingProject2/MatchingPro/.metadata/codemix.code-workspace"
+            },
+            {
+                "id": "12273b25a1ecd84af4875dfaef4e1208",
+                "configURIPath": "file:///e%3A/project/MatchingProject2/MatchingPro/.metadata/codemix.code-workspace"
+            }
+        ],
+        "files2": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#221a0f"
+}

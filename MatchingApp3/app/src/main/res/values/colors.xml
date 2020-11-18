@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1A0000</color>  <!--탭의 배경색-->
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorTabIcon">#FFFFFF</color>  <!--탭의 아이콘 색-->
+    <color name="colorTabText">#FFFFFF</color>  <!--탭의 글자 색-->
+
+</resources>
